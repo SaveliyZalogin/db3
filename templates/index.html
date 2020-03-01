@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Продажа аккаунтов Бравл Старс</title>
+    <link rel="stylesheet" href="{% static "style.css" %}">
+</head>
+<body>
+    {% block menu %}
+        <header  class="header">
+            <h1 align="center">Главное Меню</h1>
+        </header>
+    {% endblock %}
+
+    {% block mainpart %}
+        <section class="content">
+            {% for post in posts %}
+                <div class="post-title">
+                    {% if post.post_image %}
+                        <img width="200px" height="50px" src="{{ post.post_image }}"><br>
+                    {% endif %}
+                    <button class="btn-post"><a href="{% url 'post' post.id %}" class="title"><h1>{{ post.post_title }}</h1></a></button>
+                    <h3>{{ post.post_annotation }}</h3><br>
+                    <a class="title" href="{% url 'author' post.author_id %}">{{ post.author.name }}</a>
+                </div>
+            {% endfor %}
+        </section>
+    {% endblock %}
+
+    {% block down %}
+        <footer class="footer">
+            <a href="http://127.0.0.1:8000/contacts/" class="footer-link">Наши контакты:</a> <br>
+            <a href="http://127.0.0.1:8000" class="footer-link">Главная</a> <br>
+            <a href="http://127.0.0.1:8000/about/" class="footer-link">О сайте</a> <br>
+        </footer>
+    {% endblock %}
+</body>
+</html>

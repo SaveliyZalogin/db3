@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+    {% block menu %}
+        <header class="header">
+        <h1 align="center">Автор {{ author.id }}</h1>
+        </header>
+    {% endblock %}
+    {% block mainpart %}
+        <section class="content">
+            {% if author.ava %}
+                <img height="100px" width="100px" src="..\{{ author.ava }}">
+            {% endif %}
+            <p class="author-info">
+                {{ author.name }}<br>
+                {{ author.birth_date }}<br>
+                {{ author.country }}<br>
+                {{ author.code }}<br>
+                {{ posts }}
+            </p>
+
+        </section>
+    {% endblock %}
+</body>
+</html>

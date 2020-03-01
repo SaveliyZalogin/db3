@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+}
+body {
+    height: 100%;
+}
+.header {
+    height: 100px;
+    background-color: yellow;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+}
+.post-title {
+    font-family: "Arial Black", sans-serif;
+    margin-bottom: 10px;
+    border: 2px dashed black;
+    padding: 10px;
+    width: 30vw;
+    height: 30vh;
+    box-sizing: content-box;
+}
+.post-title:hover {
+    border: 3px solid black;
+    background-color: yellow;
+}
+.title {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+.content {
+    padding: 140px 20px 140px 20px;
+    background-color: burlywood;
+    height: 100vh
+}
+.btn-post:hover {
+    background-color: yellow;
+}
+.footer {
+    background-color: yellow;
+    height: 100px;
+    position: fixed;
+    left: 0; bottom: 0; right: 0;
+    width: 100%;
+    font-size: 24px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.contact {
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+.footer-link {
+    text-decoration: none;
+    color: black;
+}
+.content-text {
+    width: 50%;
+}
+.photo-in-post {
+    margin-top: 50px;
+}
+.author-info {
+    font-family: "Arial Black", sans-serif;
+    font-size: 24px;
+    height: 70vh;
+}

@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+    {% block menu %}
+        <header  class="header">
+            <h1 align="center">Пост {{ post.id }}</h1>
+        </header>
+    {% endblock %}
+    {% block mainpart %}
+        <section class="content">
+            <h1>{{ post.post_title }}</h1><br>
+            <h2>{{ post.key_word }}</h2>
+            <h2 class="content-text">{{ post.post_text }}</h2>
+            {% if post.post_image %}
+                <img src="..\{{ post.post_image }}" class="photo-in-post">
+            {% endif %}
+        </section>
+    {% endblock %}
+</body>
+</html>
